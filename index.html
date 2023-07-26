@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.3/dist/aframe-environment-component.min.js"></script>
+    
+  </head>
+
+<body>
+  <a-scene>
+    <a-assets>
+      <img id="boxTexture" src="assets/letras.jpeg">
+      <a-gltf-model id="cat" src="assets/cat.gltf"></a-gltf-model>
+  
+
+      
+    
+    </a-assets>
+
+  <a-entity environment = 
+  "
+  seed: 2;
+  skyType:  gradient;
+  horizontColor: red; 
+  ground: hills;
+  lighting: point;
+  groundTexture:squares;
+  groundColor: white;
+  groundYScale: 35;
+  dressing: trees;
+  dressingAmount: 100;
+  dressingVariance: 1 1 1;
+  dressingColor: green;
+  dressingScale: 7.3;
+  lightPosition: 10 10;
+
+  ">
+</a-entity>
+  
+<a-gltf-model src="#cat" position="-3 0 -3" rotation="0 180 0" scale="1 1 1"></a-gltf-model>
+    <a-box 
+    src="#boxTexture"
+    position=" 0 4 -4" 
+    rotation=" 0 45 0"> 
+  </a-box>
+    
+     
+    
+      <a-camera position="0 6 0"></a-camera>
+   
+  </a-scene>
+  </body>
+</html>
